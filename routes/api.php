@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\BlogInfoController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TestimonialController;
@@ -29,3 +30,5 @@ Route::post('/commentblog',[BlogController::class, 'CommentBlog']);
 Route::get('/serviceinfo', [ServiceController::class, 'ServiceInfo']);
 
 Route::get('/testimonialsinfo', [TestimonialController::class, 'TestimonialInfo']);
+
+Route::get('/bloginfo', [BlogInfoController::class, 'BlogInfo']);
