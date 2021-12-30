@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\TestimonialController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/contact', [ContactController::class, 'Contact']);
 
 Route::post('/commentblog',[BlogController::class, 'CommentBlog']);
+
+Route::get('/serviceinfo', [ServiceController::class, 'ServiceInfo']);
+
+Route::get('/testimonialsinfo', [TestimonialController::class, 'TestimonialInfo']);
