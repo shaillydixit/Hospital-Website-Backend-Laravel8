@@ -6,9 +6,12 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BlogInfoController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\GallaryController;
+use App\Http\Controllers\Admin\HomeAboutController;
+use App\Http\Controllers\Admin\PeopleBelieveController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\WhatWeDoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -44,3 +47,9 @@ Route::get('/aboutservice', [AboutServiceController::class, 'AboutService']);
 Route::get('/aboutusinfo', [AboutUsInfoController::class, 'AboutUsInfo']);
 
 Route::get('/teaminfo', [TeamController::class, 'TeamInfo']);
+
+Route::get('whatwedoinfo', [WhatWeDoController::class, 'WhatWeDoInfo']);
+
+Route::get('/peoplebelieve', [PeopleBelieveController::class, 'PeopleBelieve']);
+
+Route::get('/homeabout', [HomeAboutController::class, 'HomeAbout']);
