@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\BlogInfoController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\GallaryController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestimonialController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -41,3 +42,5 @@ Route::get('/gallaryinfo', [GallaryController::class, 'GallaryInfo']);
 Route::get('/aboutservice', [AboutServiceController::class, 'AboutService']);
 
 Route::get('/aboutusinfo', [AboutUsInfoController::class, 'AboutUsInfo']);
+
+Route::get('/teaminfo', [TeamController::class, 'TeamInfo']);
