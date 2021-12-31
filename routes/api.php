@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BlogInfoController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\GallaryController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TestimonialController;
 use Illuminate\Http\Request;
@@ -32,3 +33,5 @@ Route::get('/serviceinfo', [ServiceController::class, 'ServiceInfo']);
 Route::get('/testimonialsinfo', [TestimonialController::class, 'TestimonialInfo']);
 
 Route::get('/bloginfo', [BlogInfoController::class, 'BlogInfo']);
+
+Route::get('/gallaryinfo', [GallaryController::class, 'GallaryInfo']);
