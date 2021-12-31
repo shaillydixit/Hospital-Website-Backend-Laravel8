@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutServiceController;
+use App\Http\Controllers\Admin\AboutUsInfoController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BlogInfoController;
 use App\Http\Controllers\Admin\ContactController;
@@ -38,3 +39,5 @@ Route::get('/bloginfo', [BlogInfoController::class, 'BlogInfo']);
 Route::get('/gallaryinfo', [GallaryController::class, 'GallaryInfo']);
 
 Route::get('/aboutservice', [AboutServiceController::class, 'AboutService']);
+
+Route::get('/aboutusinfo', [AboutUsInfoController::class, 'AboutUsInfo']);
