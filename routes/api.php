@@ -5,8 +5,10 @@ use App\Http\Controllers\Admin\AboutUsInfoController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BlogInfoController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\ContactInfoController;
 use App\Http\Controllers\Admin\GallaryController;
 use App\Http\Controllers\Admin\HomeAboutController;
+use App\Http\Controllers\Admin\HomeSliderController;
 use App\Http\Controllers\Admin\PeopleBelieveController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TeamController;
@@ -53,3 +55,7 @@ Route::get('whatwedoinfo', [WhatWeDoController::class, 'WhatWeDoInfo']);
 Route::get('/peoplebelieve', [PeopleBelieveController::class, 'PeopleBelieve']);
 
 Route::get('/homeabout', [HomeAboutController::class, 'HomeAbout']);
+
+Route::get('/homeslider', [HomeSliderController::class, 'HomeSlider']);
+
+Route::get('/contactinfo', [ContactInfoController::class, 'ContactInfo']);
