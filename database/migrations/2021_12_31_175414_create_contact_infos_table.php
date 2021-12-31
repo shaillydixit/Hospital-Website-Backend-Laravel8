@@ -23,7 +23,6 @@ class CreateContactInfosTable extends Migration
             $table->string('email_icon');
             $table->string('email_one');
             $table->string('email_two');
-            $table->text('map');
             $table->timestamps();
         });
     }
