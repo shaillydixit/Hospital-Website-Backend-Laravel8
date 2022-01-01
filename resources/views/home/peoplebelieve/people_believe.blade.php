@@ -24,7 +24,7 @@
                             @foreach($data as $msg)
                             <tr>
                                 <td>{{$i++}}</td>
-                                <td><img src="{{$msg->image}}" alt="jj"></td>
+                                <td><img src="{{asset($msg->image)}}" alt="img"></td>
                                 <td>{{$msg->title}}</td>
                                 <td>{{Str::limit($msg->description), 50}}</td>
                                 <td>{{$msg->button_link}}</td>
