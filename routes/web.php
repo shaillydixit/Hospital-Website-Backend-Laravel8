@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\HomeAboutController;
 use App\Http\Controllers\Admin\PeopleBelieveController;
+use App\Http\Controllers\Admin\WhatWeDoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,3 +35,9 @@ Route::post('/create/people/believe', [PeopleBelieveController::class, 'CreatePe
 Route::get('/edit/people/believe/{id}', [PeopleBelieveController::class, 'EditPeopleBelieve'])->name('edit.people.believe');
 Route::post('/update/people/believe/{id}', [PeopleBelieveController::class, 'UpdatePeopleBelieve'])->name('update.people.believe');
 Route::get('/delete/people/believe/{id}', [PeopleBelieveController::class, 'DeletePeopleBelieve'])->name('delete.people.believe');
+
+Route::get('/what/we/do', [WhatWeDoController::class, 'WhatWeDo'])->name('whatwedo');
+Route::post('/create/what/we/do', [WhatWeDoController::class, 'CreateWhatWeDo'])->name('create.whatwedo');
+Route::get('/edit/what/we/do/{id}', [WhatWeDoController::class, 'EditWhatWeDo'])->name('edit.whatwedo');
+Route::post('/update/what/we/do/{id}', [WhatWeDoController::class, 'UpdateWhatWeDo'])->name('update.whatwedo');
+Route::get('/delete/what/we/do/{id}', [WhatWeDoController::class, 'DeleteWhatWeDo'])->name('delete.whatwedo');
