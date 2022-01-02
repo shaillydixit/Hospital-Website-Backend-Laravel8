@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\HomeAboutController;
 use App\Http\Controllers\Admin\PeopleBelieveController;
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\WhatWeDoController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,3 +42,9 @@ Route::post('/create/what/we/do', [WhatWeDoController::class, 'CreateWhatWeDo'])
 Route::get('/edit/what/we/do/{id}', [WhatWeDoController::class, 'EditWhatWeDo'])->name('edit.whatwedo');
 Route::post('/update/what/we/do/{id}', [WhatWeDoController::class, 'UpdateWhatWeDo'])->name('update.whatwedo');
 Route::get('/delete/what/we/do/{id}', [WhatWeDoController::class, 'DeleteWhatWeDo'])->name('delete.whatwedo');
+
+Route::get('/our/team', [TeamController::class, 'OurTeam'])->name('our.team');
+Route::post('/create/our/team', [TeamController::class, 'CreateOurTeam'])->name('create.our.team');
+Route::get('/edit/our/team/{id}', [TeamController::class, 'EditOurTeam'])->name('edit.our.team');
+Route::post('/update/our/team/{id}', [TeamController::class, 'UpdateOurTeam'])->name('update.our.team');
+Route::get('/delete/our/team/{id}', [TeamController::class, 'DeleteOurTeam'])->name('delete.our.team');

@@ -31,7 +31,7 @@
                         <li> <a href="{{route('welcome.message')}}">Welcome Message</a> </li>
                         <li> <a href="{{route('people.believe')}}">People Believe In Us</a> </li>
                         <li> <a href="{{route('whatwedo')}}">What We Do</a> </li>
-                        <li> <a href="index3.html">Our Team</a> </li>
+                        <li> <a href="{{route('our.team')}}">Our Team</a> </li>
 
                     </ul>
                 </li>
