@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\AboutServiceController;
 use App\Http\Controllers\Admin\AboutUsInfoController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BlogInfoController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\ContactInfoController;
 use App\Http\Controllers\Admin\GallaryController;
 use App\Http\Controllers\Admin\HomeAboutController;
 use App\Http\Controllers\Admin\PeopleBelieveController;
@@ -94,3 +96,12 @@ Route::get('/delete/blog/details/{id}', [BlogInfoController::class, 'DeleteBlog'
 
 Route::get('/blog/comments', [BlogController::class, 'BlogComments'])->name('blog.comments');
 Route::get('/delete/blog/comments/{id}', [BlogController::class, 'DeleteBlogComments'])->name('delete.comments');
+
+Route::get('/contact/details', [ContactInfoController::class, 'ContactDetails'])->name('contact.details');
+Route::post('/create/contact/details', [ContactInfoController::class, 'CreateContactDetails'])->name('create.contact.details');
+Route::get('/edit/contact/details/{id}', [ContactInfoController::class, 'EditContactDetails'])->name('edit.contact.details');
+Route::post('/update/contact/details/{id}', [ContactInfoController::class, 'UpdateContactDetails'])->name('update.contact.details');
+Route::get('/delete/contact/details/{id}', [ContactInfoController::class, 'DeleteContactDetails'])->name('delete.contact.details');
+
+Route::get('/contact/message', [ContactController::class, 'ContactMsg'])->name('contact.message');
+Route::get('/delete/contact/message/{id}', [ContactController::class, 'DeleteContactMsg'])->name('delete.contact.message');

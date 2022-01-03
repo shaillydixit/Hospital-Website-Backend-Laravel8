@@ -69,8 +69,8 @@
                     <a class="active waves-effect" href="javascript:void(0);" aria-expanded="false"><i
                             class="icon-envelope-letter fa-fw"></i> <span class="hide-menu"> Contact Page</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li> <a href="index.html">Contact Details</a> </li>
-                        <li> <a href="index2.html">Contact Message</a> </li>
+                        <li> <a href="{{route('contact.details')}}">Contact Details</a> </li>
+                        <li> <a href="{{route('contact.message')}}">Contact Message</a> </li>
                     </ul>
                 </li>
             </ul>
