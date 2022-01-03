@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <div class="row">
     <div class="col-sm-12">
         <div class="col-sm-8">
@@ -33,7 +32,7 @@
                                         data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i>
                                     </a>
                                     <a href="{{route('delete.our.services', $msg->id)}}" data-toggle="tooltip"
-                                        data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                                    data-original-title="Delete"> <i class="fa fa-trash text-danger"></i> </a>
                                 </td>
                             </tr>
                             @endforeach

@@ -33,7 +33,7 @@
                                         data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i>
                                     </a>
                                     <a href="{{route('delete.people.believe', $msg->id)}}" data-toggle="tooltip"
-                                        data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                                    data-original-title="Delete"> <i class="fa fa-trash text-danger"></i> </a>
                                 </td>
                             </tr>
                             @endforeach
