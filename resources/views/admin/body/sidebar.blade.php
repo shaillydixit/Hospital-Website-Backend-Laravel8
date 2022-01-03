@@ -42,7 +42,7 @@
                     <ul aria-expanded="false" class="collapse">
                         <li> <a href="{{route('about.us')}}">About Us Details</a> </li>
                         <li> <a href="{{route('our.services')}}">Our Services</a> </li>
-                        <li> <a href="index3.html">Our Gallary</a> </li>
+                        <li> <a href="{{route('gallary')}}">Our Gallary</a> </li>
                     </ul>
                 </li>
 

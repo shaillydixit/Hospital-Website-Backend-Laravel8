@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutServiceController;
 use App\Http\Controllers\Admin\AboutUsInfoController;
+use App\Http\Controllers\Admin\GallaryController;
 use App\Http\Controllers\Admin\HomeAboutController;
 use App\Http\Controllers\Admin\PeopleBelieveController;
 use App\Http\Controllers\Admin\TeamController;
@@ -62,3 +63,9 @@ Route::post('/create/about/us', [AboutUsInfoController::class, 'CreateAboutUs'])
 Route::get('/edit/about/us/{id}', [AboutUsInfoController::class, 'EditAboutUs'])->name('edit.about.us');
 Route::post('/update/about/us/{id}', [AboutUsInfoController::class, 'UpdateAboutUs'])->name('update.about.us');
 Route::get('/delete/about/us/{id}', [AboutUsInfoController::class, 'DeleteAboutUs'])->name('delete.about.us');
+
+Route::get('/gallary', [GallaryController::class, 'Gallary'])->name('gallary');
+Route::post('/create/gallary', [GallaryController::class, 'CreateGallary'])->name('create.gallary');
+Route::get('/edit/gallary/{id}', [GallaryController::class, 'EditGallary'])->name('edit.gallary');
+Route::post('/update/gallary/{id}', [GallaryController::class, 'UpdateGallary'])->name('update.gallary');
+Route::get('/delete/gallary/{id}', [GallaryController::class, 'DeleteGallary'])->name('delete.gallary');
