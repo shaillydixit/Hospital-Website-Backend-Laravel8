@@ -41,7 +41,7 @@
                             class="icon-notebook fa-fw"></i> <span class="hide-menu"> About Page</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li> <a href="index.html">About Us Details</a> </li>
-                        <li> <a href="index2.html">Our Services</a> </li>
+                        <li> <a href="{{route('our.services')}}">Our Services</a> </li>
                         <li> <a href="index3.html">Our Gallary</a> </li>
                     </ul>
                 </li>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutServiceController;
 use App\Http\Controllers\Admin\HomeAboutController;
 use App\Http\Controllers\Admin\PeopleBelieveController;
 use App\Http\Controllers\Admin\TeamController;
@@ -48,3 +49,9 @@ Route::post('/create/our/team', [TeamController::class, 'CreateOurTeam'])->name(
 Route::get('/edit/our/team/{id}', [TeamController::class, 'EditOurTeam'])->name('edit.our.team');
 Route::post('/update/our/team/{id}', [TeamController::class, 'UpdateOurTeam'])->name('update.our.team');
 Route::get('/delete/our/team/{id}', [TeamController::class, 'DeleteOurTeam'])->name('delete.our.team');
+
+Route::get('/our/services/', [AboutServiceController::class, 'OurServices'])->name('our.services');
+Route::post('/create/our/services', [AboutServiceController::class, 'CreateOurServices'])->name('create.our.services');
+Route::get('/edit/our/services/{id}', [AboutServiceController::class, 'EditOurServices'])->name('edit.our.services');
+Route::post('/update/our/services/{id}', [AboutServiceController::class, 'UpdateOurServices'])->name('update.our.services');
+Route::get('/delete/our/services/{id}', [AboutServiceController::class, 'DeleteOurServices'])->name('delete.our.services');
