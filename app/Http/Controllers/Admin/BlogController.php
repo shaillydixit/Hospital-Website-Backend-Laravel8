@@ -27,4 +27,14 @@ class BlogController extends Controller
 
         return $result;
      }
+
+     public function BlogComments(){
+         $data = Blog::all();
+         return view('blog.comments.blog_comment', compact('data'));
+     }
+
+     public function DeleteBlogComments($id){
+         Blog::findOrFail($id)->delete();
+         return redirect()->back();
+     }
 }

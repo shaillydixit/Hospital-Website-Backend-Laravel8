@@ -60,7 +60,7 @@
                             class="icon-grid fa-fw"></i> <span class="hide-menu"> Blog Page </span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li> <a href="{{route('blog')}}">Blog Deatils</a> </li>
-                        <li> <a href="index.html">Blog Comment</a> </li>
+                        <li> <a href="{{route('blog.comments')}}">Blog Comment</a> </li>
 
                     </ul>
                 </li>

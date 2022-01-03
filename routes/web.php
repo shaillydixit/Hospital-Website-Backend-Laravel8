@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutServiceController;
 use App\Http\Controllers\Admin\AboutUsInfoController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BlogInfoController;
 use App\Http\Controllers\Admin\GallaryController;
 use App\Http\Controllers\Admin\HomeAboutController;
@@ -91,3 +92,5 @@ Route::get('/edit/blog/details/{id}', [BlogInfoController::class, 'EditBlog'])->
 Route::post('/update/blog/details/{id}', [BlogInfoController::class, 'UpdateBlog'])->name('update.blog');
 Route::get('/delete/blog/details/{id}', [BlogInfoController::class, 'DeleteBlog'])->name('delete.blog');
 
+Route::get('/blog/comments', [BlogController::class, 'BlogComments'])->name('blog.comments');
+Route::get('/delete/blog/comments/{id}', [BlogController::class, 'DeleteBlogComments'])->name('delete.comments');
