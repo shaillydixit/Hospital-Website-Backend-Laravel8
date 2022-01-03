@@ -61,7 +61,7 @@ class AboutUsInfoController extends Controller
         $old_img1 = $request->old_image1;
         $old_img2 = $request->old_image2;
 
-        if($request->file('about_image1')){
+        if($request->file('about_image1','about_image2')){
             unlink($old_img1);
             unlink($old_img2);
             $image1 = $request->file('about_image1');

@@ -50,8 +50,8 @@
                     <a class="active waves-effect" href="javascript:void(0);" aria-expanded="false"><i
                             class="icon-equalizer fa-fw"></i> <span class="hide-menu"> Services Page</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li> <a href="index.html">Our Services</a> </li>
-                        <li> <a href="index2.html">Client Testimonials</a> </li>
+                        <li> <a href="{{route('services')}}">Our Services</a> </li>
+                        <li> <a href="{{route('testimonials')}}">Client Testimonials</a> </li>
                     </ul>
                 </li>
 
@@ -59,7 +59,7 @@
                     <a class="active waves-effect" href="javascript:void(0);" aria-expanded="false"><i
                             class="icon-grid fa-fw"></i> <span class="hide-menu"> Blog Page </span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li> <a href="index.html">Blog Deatils</a> </li>
+                        <li> <a href="{{route('blog')}}">Blog Deatils</a> </li>
                         <li> <a href="index.html">Blog Comment</a> </li>
 
                     </ul>

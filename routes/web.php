@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\Admin\AboutServiceController;
 use App\Http\Controllers\Admin\AboutUsInfoController;
+use App\Http\Controllers\Admin\BlogInfoController;
 use App\Http\Controllers\Admin\GallaryController;
 use App\Http\Controllers\Admin\HomeAboutController;
 use App\Http\Controllers\Admin\PeopleBelieveController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\WhatWeDoController;
 use Illuminate\Support\Facades\Route;
 
@@ -69,3 +72,22 @@ Route::post('/create/gallary', [GallaryController::class, 'CreateGallary'])->nam
 Route::get('/edit/gallary/{id}', [GallaryController::class, 'EditGallary'])->name('edit.gallary');
 Route::post('/update/gallary/{id}', [GallaryController::class, 'UpdateGallary'])->name('update.gallary');
 Route::get('/delete/gallary/{id}', [GallaryController::class, 'DeleteGallary'])->name('delete.gallary');
+
+Route::get('/services/main', [ServiceController::class, 'Services'])->name('services');
+Route::post('/create/services/main', [ServiceController::class, 'CreateServices'])->name('create.services');
+Route::get('/edit/services/main/{id}', [ServiceController::class, 'EditServices'])->name('edit.services');
+Route::post('/update/services/main/{id}', [ServiceController::class, 'UpdateServices'])->name('update.services');
+Route::get('/delete/services/main/{id}', [ServiceController::class, 'DeleteServices'])->name('delete.services');
+
+Route::get('/client/testimonials', [TestimonialController::class, 'Testimonials'])->name('testimonials');
+Route::post('/create/client/testimonials', [TestimonialController::class, 'CreateTestimonials'])->name('create.testimonials');
+Route::get('/edit/client/testimonials/{id}', [TestimonialController::class, 'EditTestimonials'])->name('edit.testimonials');
+Route::post('/update/client/testimonials/{id}', [TestimonialController::class, 'UpdateTestimonials'])->name('update.testimonials');
+Route::get('/delete/client/testimonials/{id}', [TestimonialController::class, 'DeleteTestimonials'])->name('delete.testimonials');
+
+Route::get('/blog/details', [BlogInfoController::class, 'Blog'])->name('blog');
+Route::post('/create/blog/details', [BlogInfoController::class, 'CreateBlog'])->name('create.blog');
+Route::get('/edit/blog/details/{id}', [BlogInfoController::class, 'EditBlog'])->name('edit.blog');
+Route::post('/update/blog/details/{id}', [BlogInfoController::class, 'UpdateBlog'])->name('update.blog');
+Route::get('/delete/blog/details/{id}', [BlogInfoController::class, 'DeleteBlog'])->name('delete.blog');
+
