@@ -1,0 +1,167 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/bloginfo": {
+            "get": {
+                "tags": [
+                    "Blogs"
+                ],
+                "summary": "Get ALL Blog DATA",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "blog_image": {
+                                            "type": "number",
+                                            "example": "hsjdhasdhkj"
+                                        },
+                                        "blog_title": {
+                                            "type": "string",
+                                            "example": "mera naam hai blog"
+                                        },
+                                        "blog_description": {
+                                            "type": "string",
+                                            "example": "kaafi saara description"
+                                        },
+                                        "blog_tags": {
+                                            "type": "string",
+                                            "example": "Blog"
+                                        },
+                                        "author_name": {
+                                            "type": "string",
+                                            "example": "chacha raseele"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/contact": {
+            "post": {
+                "summary": "Adds user's contact and personal information to the DB",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "phone": {
+                                        "type": "string"
+                                    },
+                                    "message": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "name": "Jessica Smith",
+                                    "email": "prashantdixit@gmail.com",
+                                    "phone": "7905319572",
+                                    "message": "hemlooooo"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "example": "Jessaaa"
+                                        },
+                                        "email": {
+                                            "type": "string",
+                                            "example": "ss@g.com"
+                                        },
+                                        "phone": {
+                                            "type": "string",
+                                            "example": "321893718293"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Jasdasasda hasjdhkas hjasdh"
+                                        },
+                                        "contact_date": {
+                                            "type": "string",
+                                            "example": "12/12/12"
+                                        },
+                                        "contact_time": {
+                                            "type": "string",
+                                            "example": "11/12/12"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Falure/Invalid",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "msg": {
+                                            "type": "string",
+                                            "example": "fat ke chaar"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/user/account/validate": {
+            "get": {
+                "summary": "validates an account",
+                "operationId": "accountValidate",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Validation Response"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

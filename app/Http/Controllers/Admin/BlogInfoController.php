@@ -7,6 +7,25 @@ use App\Models\BlogInfo;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
+    /**
+     * Get ALL Blog DATA
+     * @OA\Get (
+     *     path="/api/bloginfo",
+     *     tags={"Blogs"},
+     *     @OA\Response(
+     *         response=200,
+     *         description="success",
+     *         @OA\JsonContent(
+     *              @OA\Property(property="blog_image", type="number", example="hsjdhasdhkj"),
+     *              @OA\Property(property="blog_title", type="string", example="mera naam hai blog"),
+     *              @OA\Property(property="blog_description", type="string", example="kaafi saara description"),
+     *              @OA\Property(property="blog_tags", type="string", example="Blog"),
+     *              @OA\Property(property="author_name", type="string", example="chacha raseele")
+     *         )
+     *     )
+     * )
+     */
+
 class BlogInfoController extends Controller
 {
     public function BlogInfo(){
